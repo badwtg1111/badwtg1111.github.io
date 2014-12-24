@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: 
+
+Sitemap: http://badwtg1111.github.io/sitemap.xml 
