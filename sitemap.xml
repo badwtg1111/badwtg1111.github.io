@@ -1,20 +1,131 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://badwtg1111.github.io/blog/2014/12/24/first-test-for-octopress/</loc>
-    <lastmod>2014-12-24T14:40:20+08:00</lastmod>
-    <priority>0.8</priority>
+    <loc>http://badwtg1111.github.io/javascripts/libs/bootstrap-3.0.0/components.html</loc>
+    <lastmod>2014-12-24T16:19:31+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://badwtg1111.github.io/javascripts/libs/bootstrap-3.0.0/css.html</loc>
+    <lastmod>2014-12-24T16:19:31+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://badwtg1111.github.io/javascripts/libs/bootstrap-3.0.0/customize.html</loc>
+    <lastmod>2014-12-24T16:19:31+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://badwtg1111.github.io/javascripts/libs/bootstrap-3.0.0/getting-started.html</loc>
+    <lastmod>2014-12-24T16:19:31+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://badwtg1111.github.io/javascripts/libs/bootstrap-3.0.0/</loc>
+    <lastmod>2014-12-24T16:19:31+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>http://badwtg1111.github.io/</loc>
-    <lastmod>2014-12-24T15:54:10+08:00</lastmod>
+    <lastmod>2014-12-24T16:19:31+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>http://badwtg1111.github.io/blog/archives/</loc>
-    <lastmod>2014-12-24T15:54:10+08:00</lastmod>
+    <lastmod>2014-12-24T16:19:31+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://badwtg1111.github.io/javascripts/libs/bootstrap-3.0.0/javascript.html</loc>
+    <lastmod>2014-12-24T16:19:31+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://badwtg1111.github.io/javascripts/libs/bootstrap-3.0.0/js/tests/index.html</loc>
+    <lastmod>2014-12-24T16:13:37+08:00</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>http://badwtg1111.github.io/javascripts/libs/bootstrap-3.0.0/examples/offcanvas/index.html</loc>
+    <lastmod>2014-12-24T16:13:37+08:00</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>http://badwtg1111.github.io/javascripts/libs/bootstrap-3.0.0/examples/navbar/index.html</loc>
+    <lastmod>2014-12-24T16:13:37+08:00</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>http://badwtg1111.github.io/javascripts/libs/bootstrap-3.0.0/examples/grid/index.html</loc>
+    <lastmod>2014-12-24T16:13:37+08:00</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>http://badwtg1111.github.io/javascripts/libs/bootstrap-3.0.0/examples/jumbotron-narrow/index.html</loc>
+    <lastmod>2014-12-24T16:13:37+08:00</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>http://badwtg1111.github.io/javascripts/libs/bootstrap-3.0.0/examples/non-responsive/index.html</loc>
+    <lastmod>2014-12-24T16:13:37+08:00</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>http://badwtg1111.github.io/javascripts/libs/bootstrap-3.0.0/examples/starter-template/index.html</loc>
+    <lastmod>2014-12-24T16:13:37+08:00</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>http://badwtg1111.github.io/javascripts/libs/bootstrap-3.0.0/examples/sticky-footer-navbar/index.html</loc>
+    <lastmod>2014-12-24T16:13:37+08:00</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>http://badwtg1111.github.io/javascripts/libs/bootstrap-3.0.0/examples/theme/index.html</loc>
+    <lastmod>2014-12-24T16:13:37+08:00</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>http://badwtg1111.github.io/javascripts/libs/bootstrap-3.0.0/examples/carousel/index.html</loc>
+    <lastmod>2014-12-24T16:13:37+08:00</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>http://badwtg1111.github.io/javascripts/libs/bootstrap-3.0.0/examples/navbar-fixed-top/index.html</loc>
+    <lastmod>2014-12-24T16:13:37+08:00</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>http://badwtg1111.github.io/javascripts/libs/bootstrap-3.0.0/examples/justified-nav/index.html</loc>
+    <lastmod>2014-12-24T16:13:37+08:00</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>http://badwtg1111.github.io/javascripts/libs/bootstrap-3.0.0/examples/jumbotron/index.html</loc>
+    <lastmod>2014-12-24T16:13:37+08:00</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>http://badwtg1111.github.io/javascripts/libs/bootstrap-3.0.0/examples/signin/index.html</loc>
+    <lastmod>2014-12-24T16:13:37+08:00</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>http://badwtg1111.github.io/javascripts/libs/bootstrap-3.0.0/examples/navbar-static-top/index.html</loc>
+    <lastmod>2014-12-24T16:13:37+08:00</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>http://badwtg1111.github.io/javascripts/libs/bootstrap-3.0.0/examples/sticky-footer/index.html</loc>
+    <lastmod>2014-12-24T16:13:37+08:00</lastmod>
+    <priority>0.6</priority>
   </url>
 </urlset>
