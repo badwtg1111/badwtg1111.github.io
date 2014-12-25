@@ -1,0 +1,3 @@
+[submodule ".themes/octoplate"]
+	path = .themes/octoplate
+	url = git://github.com/mjhea0/octoplate.git
