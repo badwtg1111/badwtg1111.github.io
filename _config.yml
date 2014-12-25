@@ -5,9 +5,9 @@
 url: http://badwtg1111.github.io
 title: My Octopress Blog
 subtitle: A blogging framework for hackers.
-author: Your Name
+author: badwtg1111 
 simple_search: https://www.google.com/search
-description:
+description: 
 
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
 # You can customize the format as defined in
@@ -17,9 +17,9 @@ date_format: "ordinal"
 
 # RSS / Email (optional) subscription links (change if using something like Feedburner)
 subscribe_rss: /webrtcblog/atom.xml
-subscribe_email:
+subscribe_email: badwtg1111@hotmail.com
 # RSS feeds can list your email address if you like
-email:
+email: badwtg1111@hotmail.com
 
 # ----------------------- #
 #    Jekyll & Plugins     #
@@ -99,3 +99,5 @@ google_analytics_tracking_id:
 
 # Facebook Like
 facebook_like: false
+
+weibo_share: true

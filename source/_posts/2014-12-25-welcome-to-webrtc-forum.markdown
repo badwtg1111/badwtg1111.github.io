@@ -6,7 +6,7 @@ comments: true
 categories: 
 ---
 webrtc论坛：
-www.webrtccn.com
+http://www.webrtccn.com
 
 欢迎加入，共同探讨webrtc相关技术.
 
