@@ -4,7 +4,7 @@
   <title><![CDATA[Badwtg1111's Blog]]></title>
   <link href="http://badwtg1111.github.io/atom.xml" rel="self"/>
   <link href="http://badwtg1111.github.io/"/>
-  <updated>2014-12-25T18:48:49+08:00</updated>
+  <updated>2015-01-05T19:01:28+08:00</updated>
   <id>http://badwtg1111.github.io/</id>
   <author>
     <name><![CDATA[badwtg1111]]></name>
@@ -12,6 +12,55 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[goagent ubuntu]]></title>
+    <link href="http://badwtg1111.github.io/blog/2015/01/05/goagent-ubuntu/"/>
+    <updated>2015-01-05T18:59:57+08:00</updated>
+    <id>http://badwtg1111.github.io/blog/2015/01/05/goagent-ubuntu</id>
+    <content type="html"><![CDATA[<p>Ubuntu下安装goagent
+一生之盟 一生之盟 2013-06-25 12:37:22
+下载并安装goagent和Google AppEngine SDK</p>
+
+<p>goagent下载地址：<a href="http://code.google.com/p/goagent/">http://code.google.com/p/goagent/</a></p>
+
+<p>首页已经给出下载版本，本次使用goagent 1.7.10 稳定版。</p>
+
+<p>Google AppEngine
+SDK下载地址：<a href="https://code.google.com/intl/zh-CN/appengine/downloads.html">https://code.google.com/intl/zh-CN/appengine/downloads.html</a></p>
+
+<p>Google AppEngine SDK请下载Google AppEngine SDK for Python版本（linux）。</p>
+
+<p>下载 Google AppEngine
+SDK后解压google_appengine到自己的主目录，比如我的主目录是/home/leo/，解压完成后，进入/home/leo/google_appengine/。</p>
+
+<p>下载goagent解压goagent到google_appengine目录下，解压完成应该存在/home/leo/google_appengine/goagent</p>
+
+<p>配置并上传goagent。</p>
+
+<p>打开goagent目录，进入目录下server/python目录，修改app.yaml文件中application为刚刚申请的AppID。</p>
+
+<p>在google_appengine目录下，执行./appcfg.py update
+./goagent/server/python上传，会提示输入AppID,以及你的邮箱，和刚申请的应用程序专用密码。</p>
+
+<p>在goagent目录下，下该local目录下proxy.ini文件，将文件中[ gae  ]项目的appid修改为
+你使用的AppID.</p>
+
+<p>然后在local目录下，运行python proxy.py，即可使用代理。</p>
+
+<p>安装SwitchySharp插件，最后导入这个设置<a href="http://goagent.googlecode.com/files/SwitchyOptions.bak%E5%AF%BC%E5%85%A5%E6%96%87%E4%BB%B6%E6%98%AF%E6%8C%87%E5%9C%A8SwitchySharp%E6%8F%92%E4%BB%B6%E9%80%89%E9%A1%B9%E4%B8%AD%E7%9A%84%E5%AF%BC%E5%85%A5/%E5%AF%BC%E5%87%BA%E8%AE%BE%E7%BD%AE%EF%BC%8C%E4%BB%8E%E6%96%87%E4%BB%B6%E6%81%A2%E5%A4%8D%E3%80%82">http://goagent.googlecode.com/files/SwitchyOptions.bak%E5%AF%BC%E5%85%A5%E6%96%87%E4%BB%B6%E6%98%AF%E6%8C%87%E5%9C%A8SwitchySharp%E6%8F%92%E4%BB%B6%E9%80%89%E9%A1%B9%E4%B8%AD%E7%9A%84%E5%AF%BC%E5%85%A5/%E5%AF%BC%E5%87%BA%E8%AE%BE%E7%BD%AE%EF%BC%8C%E4%BB%8E%E6%96%87%E4%BB%B6%E6%81%A2%E5%A4%8D%E3%80%82</a></p>
+
+<p>安装证书导入工具</p>
+
+<p>apt-get install libnss3-tools</p>
+
+<p>将goAgent文件夹内的证书文件CA.crt导入(注意证书的绝对路)</p>
+
+<pre><code>certutil -d sql:$HOME/.pki/nssdb -A -t TC -n "goagent" -i
+/home/dn/google_appengine/goagent-goagent-91cd5e4/local/CA.crt  
+</code></pre>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[welcome to webrtc forum]]></title>
