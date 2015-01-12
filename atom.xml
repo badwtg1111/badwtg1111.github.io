@@ -4,7 +4,7 @@
   <title><![CDATA[Badwtg1111's Blog]]></title>
   <link href="http://badwtg1111.github.io/atom.xml" rel="self"/>
   <link href="http://badwtg1111.github.io/"/>
-  <updated>2015-01-05T19:01:28+08:00</updated>
+  <updated>2015-01-12T12:36:37+08:00</updated>
   <id>http://badwtg1111.github.io/</id>
   <author>
     <name><![CDATA[badwtg1111]]></name>
@@ -12,6 +12,32 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[WEBRTC开发工具]]></title>
+    <link href="http://badwtg1111.github.io/blog/2015/01/12/webrtckai-fa-gong-ju/"/>
+    <updated>2015-01-12T12:35:34+08:00</updated>
+    <id>http://badwtg1111.github.io/blog/2015/01/12/webrtckai-fa-gong-ju</id>
+    <content type="html"><![CDATA[<p>AT&amp;T发布WebRTC开发工具 作者 丛一 发布于 2015年1月11日 | 讨论
+分享到： 微博 微信 Facebook Twitter 有道云笔记 邮件分享
+稍后阅读我的阅读清单
+为什么我们只能用电话打电话？尽管谷歌和苹果都为用户提供了在手机、平板电脑和便携电脑之间互通文本消息和即时消息的功能，但传统的电话呼叫还是只能受限于一个设备。现在AT&amp;T公司正在试图利用WebRTC技术终结这种窘境，向前迈出一大步。WebRTC可以让你在智能手机上拨打电话，然后将通话转移到便携电脑的浏览器会话中，反之亦然。</p>
+
+<p>AT&amp;T在2015年AT&amp;T开发者峰会上发布了一款增强版WebRTC技术的开发工具，无需插件就可以在浏览器之间进行音频或视频通话。并且声称他们是第一家利用AT&amp;T的增强版WebRTC API为WebRTC提供商业化支持的美国电信运营商。尽管AT&amp;T是第一家发布商用WebRTC API的美国运营商，WebRTC实际上是一种正逐渐被世界范围内的运营商广泛采纳的工业标准。Telefonica已经支持WebRTC有一段时间了，而其他的运营商的身影也频频出现在各种WebRTC的研讨会上，尽管目前还暂未见到有比较重要的公告发布。</p>
+
+<p>AT&amp;T的增强版WebRTC API目前已发布公开测试版本并且在WebRTC基础上做了一些功能改进。第一个改进是增强版WebRTC的通信可以扩展到固定电话和移动电话之间，而不仅是端对端的或浏览器会话间的。这对于开发者和用户来说都是相当有价值的并且因为消除了一个关键障碍，会大大刺激这种技术采用量的增长。第二个改进是利用终端用户的AT&amp;T移动电话号码，开发者可以编程支持来自浏览器的WebRTC通信的来电显示。最后一个改进是开发者可以将从PC、MAC或平板电脑上发起的呼叫转移到智能手机上。</p>
+
+<p>在开发者峰会的现场演示中，AT&amp;T和Plantronics向参会者展示了一个工人如何利用增强版WebRTC API通过他的移动电话号码发起可视对话然后通过便携电脑完成了一次在线航班预定。然后又将预定确认信息和其他细节信息传输到其移动电话之中。</p>
+
+<p>据AT&amp;T的移动化首席营销官David Christopher在开发者峰会上介绍：“AT&amp;T强大的增强版WebRTC API给广大开发者提供了一个重新想象以IP为中心的互联世界中的电话和视频通话体验的机会。WebRTC被分析师们看作是过去数年来最具破坏性的通讯技术之一，我们认为就其能够为企业和消费者所能带来的价值而言，标准的采用以及相关的创新发展将会有非常快速地增长。”</p>
+
+<p>感谢郭蕾对本文的审校。</p>
+
+<p>给InfoQ中文站投稿或者参与内容翻译工作，请邮件至editors@cn.infoq.com。也欢迎大家通过新浪微博（@InfoQ）或者腾讯微博（@InfoQ）关注我们，并与我们的编辑和其他读者朋友交流。</p>
+
+<p>【QCon北京2015大会】把握趋势，邀请国内外顶级专家，设计涵盖大数据、云计算、移动开发、技术创业、前端和敏捷等热点领域的18个专题，IT领域的技术盛宴。了解详情。</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[goagent ubuntu]]></title>
