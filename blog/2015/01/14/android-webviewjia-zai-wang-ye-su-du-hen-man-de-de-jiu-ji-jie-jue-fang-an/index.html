@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>android:webview加载网页速度很慢的的究极解决方案 - Badwtg1111&#8217;s Blog</title>
+  <meta name="author" content="badwtg1111">
+
+  
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://badwtg1111.github.io/blog/2015/01/14/android-webviewjia-zai-wang-ye-su-du-hen-man-de-de-jiu-ji-jie-jue-fang-an">
+  <link href="/favicon.png" type="image/png" rel="icon">
+  <link href="/webrtcblog/atom.xml" rel="alternate" title="Badwtg1111's Blog" type="application/atom+xml">
+
+  <link href="/javascripts/libs/bootstrap-3.0.0/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="/javascripts/libs/bootstrap-3.0.0/dist/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css">
+<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+
+
+  <script src="/javascripts/libs/jquery/jquery-2.0.3.min.js"></script>
+  
+
+</head>
+
+  <body   >
+    <div id="wrap">
+      <header role="banner">
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Badwtg1111&#8217;s Blog</a>
+        </div>
+
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="/">Blog</a></li>
+                <li><a href="/blog/archives">Archives</a></li>
+                <li><a href="/about">About</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a class="subscribe-rss" href="/webrtcblog/atom.xml" title="subscribe via RSS">
+                        <span class="visible-xs">RSS</span>
+                        <img class="hidden-xs" src="/images/rss.png" alt="RSS">
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="subscribe-email" href="badwtg1111@hotmail.com" title="subscribe via email">
+                        <span class="visible-xs">Email</span>
+                        <img class="hidden-xs" src="/images/email.png" alt="Email">
+                    </a>
+                </li>
+                
+            </ul>
+            
+                <form class="search navbar-form navbar-right" action="https://www.google.com/search" method="GET">
+                    <input type="hidden" name="q" value="site:badwtg1111.github.io">
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="q" placeholder="Search">
+                    </div>
+                </form>
+            
+        </div>
+    </div>
+</nav>
+
+
+      </header>
+      <div id="main" class="container">
+        <div id="content">
+          <div class="row">
+  <div class="page-content col-md-9">
+    <article class="hentry" role="article">
+      
+  <header class="page-header">
+    
+      <p class="meta text-muted text-uppercase">
+        
+
+
+
+
+
+
+
+
+
+
+
+
+<span class="glyphicon glyphicon-calendar"></span> <time datetime="2015-01-14T16:13:24+08:00" pubdate data-updated="true"></time>
+        
+      </p>
+    
+    
+    <h1 class="entry-title">
+        Android:webview加载网页速度很慢的的究极解决方案
+        
+    </h1>
+    
+  </header>
+
+
+<div class="entry-content clearfix"><p>android:webview加载网页速度很慢的的究极解决方案  此博文包含图片  (2012-06-03 09:49:02)转载▼
+标签： 杂谈    分类： android编程
+【转载请注明来源自<a href="http://hi.baidu.com/goldchocobo/%E3%80%91">http://hi.baidu.com/goldchocobo/%E3%80%91</a>
+       Android客户端中混搭HTML页面，会出现虽然HTML内容载入完成，标题也正常显示，但是整个网页需要等到近5秒（甚至更多）时间才会显示出来。研究了很久，搜遍了国外很多网站，也看过PhoneGap的代码，一直无解。
+       一般人堆WebView的加速，都是建议先用webView.getSettings().setBlockNetworkImage(true); 将图片下载阻塞，然后在浏览器的OnPageFinished事件中设置webView.getSettings().setBlockNetworkImage(false); 通过图片的延迟载入，让网页能更快地显示。
+但是，通过实际的日志发现，Android的OnPageFinished事件会在Javascript脚本执行完成之后才会触发。如果在页面中使用JQuery，会在处理完DOM对象，执行完$(document).ready(function() {});事件自会后才会渲染并显示页面。如下图
+android:webview加载网页速度很慢的的究极解决方案
+           可以看到在载入完最后一个JS脚本之后，对DOM元素的渲染和处理就花了8秒，然后执行了AJAX方法载入外部页面又花了2、3秒，最后才会触发onPageFinished显示页面。再往后由于程序中设置了setBlockNetworkImage(false)，所以开始载入外部图片。（如果不控制这个参数，图片载入会在渲染期间下载。  综上，由于JS脚本的处理，造成了一张页面打开多花了10秒左右时间。而同样的页面在iPhone上却是载入相当的快，显示完页面才会触发脚本的执行。（提示：如果使用JQueryMobile，更会慢得离谱）
+         要解决这个问题，就是想办法让浏览器延迟加载JS脚本，但是Android的WebView控件没有这样的参数。无法单独阻塞JS脚本，另外有个setBlockNetworkLoads，用了之后也无法实现类似图片的异步载入的功能，页面成了光板，连CSS也阻塞了。
+         就是这个问题困扰了很久，直到在做HTML照片墙时，由于setBlockNetworkImage在OnPageFinished之后才会释放，导致在JS脚本载入图片过程中无法获取图片的高宽信息，最后巧妙地通过$(document).ready(function() {setTimeout(func,10)});，成功将函数在onPageFinished之后运行。那么延伸来想，是否可以将JS脚本也用同样的方式延迟载入呢？
+          答案是肯定的，在<a href="http://wonko.com/post/painless_javascript_lazy_loading_with_lazyload%E5%8F%AF%E4%BB%A5%E6%89%BE%E5%88%B0JS%E8%84%9A%E6%9C%AC%E5%BB%B6%E8%BF%9F%E5%8A%A0%E8%BD%BD%E7%9A%84%E7%AC%AC%E4%B8%89%E6%96%B9%E7%BB%84%E4%BB%B6%E3%80%82">http://wonko.com/post/painless_javascript_lazy_loading_with_lazyload%E5%8F%AF%E4%BB%A5%E6%89%BE%E5%88%B0JS%E8%84%9A%E6%9C%AC%E5%BB%B6%E8%BF%9F%E5%8A%A0%E8%BD%BD%E7%9A%84%E7%AC%AC%E4%B8%89%E6%96%B9%E7%BB%84%E4%BB%B6%E3%80%82</a>
+         我改造了之前速度奇慢的界面，我所使用的核心JS代码如下：</p>
+
+<pre><code>    &lt;script src="/css/j/lazyload-min.js" type="text/javascript"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt; 
+   loadComplete(){
+      //instead of document.read()
+   }
+    function loadscript()
+    {
+</code></pre>
+
+<p>LazyLoad.loadOnce([
+ &lsquo;/css/j/jquery-1.6.2.min.js&rsquo;,
+ &lsquo;/css/j/flow/jquery.flow.1.1.min.js&rsquo;,<br/>
+ &lsquo;/css/j/min.js?v=2011100852&rsquo;
+], loadComplete);
+        }
+        setTimeout(loadscript,10);
+        </script></p>
+
+<pre><code>    就是混搭setTimeout和layzload，让JS脚本可以真正在onPageFinish之后执行。
+    最终执行的效果如图：
+</code></pre>
+
+<p>android:webview加载网页速度很慢的的究极解决方案
+        可以看到非常显著的改善，从onPageStarted到onPageFinished只用了2秒不到的时间，这个时间主要花在HTML和CSS渲染上。从界面上来看，就是一闪而过的网页载入进度条，立即显示CSS渲染过的页面效果，然后再载入并执行JS脚本，逐块显示需要通过AJAX获取的数据。
+        综上，解决Android载入WebView页面慢的问题，不是Android程序员的事情，而是Web前端工程师的问题。如果您使用基于WebView的Android第三方壳工具（例如PhoneGap，可以通过这种方式改善UI界面的响应时间）。
+        发布这个解决方案，希望基于Web的客户端解决方案能更上一层楼，让HTML和原生APP混搭或的纯WEBAPP实现效果可以更理想，功德无量&hellip;&hellip;</p>
+
+<p>转自: <a href="http://blog.sina.com.cn/s/blog_8ad7a176010132ew.html">http://blog.sina.com.cn/s/blog_8ad7a176010132ew.html</a></p>
+</div>
+
+
+      <footer>
+        <p class="meta text-muted">
+          
+  
+
+<span class="glyphicon glyphicon-user"></span> <span class="byline author vcard">Posted by <span class="fn">badwtg1111</span></span>
+
+          
+
+
+
+
+
+
+
+
+
+
+
+
+<span class="glyphicon glyphicon-calendar"></span> <time datetime="2015-01-14T16:13:24+08:00" pubdate data-updated="true"></time>
+        </p>
+        
+          <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://badwtg1111.github.io/blog/2015/01/14/android-webviewjia-zai-wang-ye-su-du-hen-man-de-de-jiu-ji-jie-jue-fang-an/" data-via="" data-counturl="http://badwtg1111.github.io/blog/2015/01/14/android-webviewjia-zai-wang-ye-su-du-hen-man-de-de-jiu-ji-jie-jue-fang-an/" >Tweet</a>
+  
+  
+  
+  
+  
+  <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style_24x24">
+    <a class="jiathis_button_qzone"></a>
+    <a class="jiathis_button_tsina"></a>
+    <a class="jiathis_button_tqq"></a>
+    <a class="jiathis_button_weixin"></a>
+    <a class="jiathis_button_renren"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+    <a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1407393208186499" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+<!-- UY BEGIN -->
+<div id="uyan_frame"></div>
+<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js"></script>
+<!-- UY END -->
+
+<!-- UJian Button BEGIN -->
+<div class="ujian-hook"></div>
+<script type="text/javascript">var ujian_config = {num:12,picSize:84,textHeight:45};</script>
+<script type="text/javascript" src="http://v1.ujian.cc/code/ujian.js"></script>
+<a href="http://www.ujian.cc" style="border:0;"><img src="http://img.ujian.cc/pixel.png" alt="友荐云推荐" style="border:0;padding:0;margin:0;" /></a>
+<!-- UJian Button END -->
+
+
+  
+</div>
+
+        
+        
+          <ul class="meta text-muted pager">
+            
+            <li class="previous"><a href="/blog/2015/01/14/zhuan-webrtcxue-xi-bi-ji/" title="Previous Post: 转:webrtc学习笔记">&laquo; 转:webrtc学习笔记</a></li>
+            
+            
+          </ul>
+        
+      </footer>
+    </article>
+    
+  </div>
+</div>
+
+        </div>
+      </div>
+    <footer role="contentinfo"><div class="container">
+    <p class="text-muted credits">
+  Copyright &copy; 2015 - badwtg1111<br>
+  <small>
+      <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>,
+      <span class="credit">customized with <a href="https://github.com/mjhea0/octoplate">Octoplate</a></span>.
+  </small>
+  <a href="#" id="back">Back to Top</a>
+</p>
+
+<nav id="bottom" class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
+</nav>
+
+</div>
+</footer>
+    <script src="/javascripts/libs/bootstrap-3.0.0/dist/js/bootstrap.min.js"></script>
+<script src="/javascripts/modernizr-2.0.js"></script>
+
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+    </div>
+  </body>
+</html>
