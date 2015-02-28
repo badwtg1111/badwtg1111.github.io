@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://badwtg1111.github.io/blog/2015/02/28/markdown-syntax-cn/</loc>
+    <lastmod>2015-02-28T16:11:24+08:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>http://badwtg1111.github.io/blog/2015/02/27/chrome-markdown-preview/</loc>
     <lastmod>2015-02-27T17:18:01+08:00</lastmod>
     <priority>0.8</priority>
@@ -57,49 +62,49 @@
   </url>
   <url>
     <loc>http://badwtg1111.github.io/javascripts/libs/bootstrap-3.0.0/components.html</loc>
-    <lastmod>2015-02-27T19:07:55+08:00</lastmod>
+    <lastmod>2015-02-28T17:07:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>http://badwtg1111.github.io/javascripts/libs/bootstrap-3.0.0/css.html</loc>
-    <lastmod>2015-02-27T19:07:55+08:00</lastmod>
+    <lastmod>2015-02-28T17:07:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>http://badwtg1111.github.io/javascripts/libs/bootstrap-3.0.0/customize.html</loc>
-    <lastmod>2015-02-27T19:07:55+08:00</lastmod>
+    <lastmod>2015-02-28T17:07:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>http://badwtg1111.github.io/javascripts/libs/bootstrap-3.0.0/getting-started.html</loc>
-    <lastmod>2015-02-27T19:07:55+08:00</lastmod>
+    <lastmod>2015-02-28T17:07:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>http://badwtg1111.github.io/javascripts/libs/bootstrap-3.0.0/</loc>
-    <lastmod>2015-02-27T19:07:55+08:00</lastmod>
+    <lastmod>2015-02-28T17:07:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>http://badwtg1111.github.io/</loc>
-    <lastmod>2015-02-27T19:07:55+08:00</lastmod>
+    <lastmod>2015-02-28T17:07:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>http://badwtg1111.github.io/blog/archives/</loc>
-    <lastmod>2015-02-27T19:07:55+08:00</lastmod>
+    <lastmod>2015-02-28T17:07:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>http://badwtg1111.github.io/javascripts/libs/bootstrap-3.0.0/javascript.html</loc>
-    <lastmod>2015-02-27T19:07:55+08:00</lastmod>
+    <lastmod>2015-02-28T17:07:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
