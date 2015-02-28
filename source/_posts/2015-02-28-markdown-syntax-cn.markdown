@@ -29,7 +29,8 @@ categories:
   [Github]: https://github.com/riku/Markdown-Syntax-CN
   [GitCafe]: http://gitcafe.com/riku/Markdown-Syntax-CN/
 
-Markdown 语法说明 (简体中文版) / ([点击查看快速入门](./Markdown-Syntax-CN-master/basic.html))
+Markdown 语法说明 (简体中文版) /
+([点击查看快速入门](https://github.com/badwtg1111/badwtg1111.github.io/tree/source/source/_posts/Markdown-Syntax-CN-master/basic.html))
 ================
 
 *   [概述](#overview)
